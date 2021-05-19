@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<video width="620" height="640" autoplay loop muted controls="controls">
+  <!--<source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4" type="video/mp4" />-->
+  <source src="error.mp4" type="video/mp4" />  
+</video>
+<script type="text/javascript">
+window.onload = function () {
+    var element = document.getElementById('video');
+    element.muted = true;
+}
+  document.getElementsByTagName('video')[0].defaultMuted = true;
+  
+  document.getElementsByTagName('video')[0].muted = true;
+
+</script>
+</body>
+
+</html>
+
