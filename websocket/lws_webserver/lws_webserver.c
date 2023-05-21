@@ -107,7 +107,6 @@ static struct lws_protocols protocols[] = {
 
 int main()
 {
-	// Server url will be http://localhost:9000
 	int port = 9000;
 	struct lws_context *context;
 	struct lws_context_creation_info context_info = {
