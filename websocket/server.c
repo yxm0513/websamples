@@ -79,8 +79,9 @@ int main(void)
     info.port = port;
     info.iface = interface;
     info.protocols = (struct lws_protocols[]){
+        //{"websocket", callback_websocket, 0},
+        {"", callback_websocket, 0, 0, 0, NULL, 0},
         {"http-only", callback_http, 0},
-        {"websocket", callback_websocket, 0},
         {NULL, NULL, 0}
     };
     lwsl_notice("start server");

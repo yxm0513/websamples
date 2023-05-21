@@ -3,12 +3,14 @@
     <meta charset="UTF-8">
     <script>
         // 创建WebSocket连接
+        window.WebSocket = window.WebSocket || window.MozWebSocket;
         const socket = new WebSocket('ws://127.0.0.1:8000');
-        //const socket = new WebSocket('ws://10.151.3.73:8000');
+        //const socket = new WebSocket('ws://127.0.0.1:8000', 'websocket'); // 注意subprotocol
 
         // 连接打开时触发
         socket.onopen = function(event) {
-            console.log('WebSocket连接已打开');
+            console.log(`WebSocket连接已打开${socket}`);
+            console.log(socket);
             // 在连接打开时，可以发送消息到服务端
             socket.send('Hello, server!');
         };
