@@ -1,8 +1,10 @@
 <html>
 <head>
+    <meta charset="UTF-8">
     <script>
         // 创建WebSocket连接
         const socket = new WebSocket('ws://127.0.0.1:8000');
+        //const socket = new WebSocket('ws://10.151.3.73:8000');
 
         // 连接打开时触发
         socket.onopen = function(event) {
@@ -39,5 +41,6 @@
 <body>
     <div id="message">
     </div>
+    <h1> hello websockets </h1>
 </body>
 </html>
