@@ -1,1 +1,1 @@
-暂时perl , c 不work 其他的ok
+暂时外边的c 不work 其他的ok
