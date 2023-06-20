@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #0094b2 0%, #007598 100%);
+}
+
+.login-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.input-box input {
+    width: 19rem;
+    padding: 0.8rem 1rem;
+    border: 0;
+    background-color: #f1f7fc;
+    margin-top: 0.8rem;
+    border-radius: 0.2rem;
+}
+
+.input-box input::placeholder {
+    font-size: 0.75rem;
+    color: #717171;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.forgot-password{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0.8rem 0
+}
+
+.forgot-password a {
+    text-decoration: underline;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #009482;
+}
+
+.submit-btn input[type='submit']{
+    border:0;
+    width: 19rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #f96302;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    border-radius: 0.2rem;
+    transition: all 0.2s ease-out;
+}
+
+.submit-btn input[type='submit']:active {
+    transform: scale(0.97);
+}
+
+.sign-up-container { 
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #484b4b;
+    margin-top: 0.8rem;
+}
+
+.sign-up-container a {
+    text-decoration: underline;
+    color: #0094b2;
+}
