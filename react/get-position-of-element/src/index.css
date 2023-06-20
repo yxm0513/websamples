@@ -1,0 +1,44 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  background-color: #e7f8f2;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #053727;
+  display: inline;
+  text-align: justify;
+  line-height: 1.6rem;
+}
+
+.card {
+  width: 200px;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 3px dashed #10b981;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #085d41;
+}
+
+.card p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #053727;
+  display: inline-block;
+  margin: 15px 20px 0 20px;
+}

@@ -1,0 +1,79 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.App-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a7ff8;
+}
+
+.card {
+  width: 22rem;
+  height: 10rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 2px solid #f6f6f6;
+  overflow: hidden;
+  margin: 0 0.5rem;
+}
+
+.card-header {
+  border-bottom: 1px solid #f6f6f6;
+  padding: 1rem 1.2rem;
+  background-color: #fbfbfb;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #343434;
+  margin: 0;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #343434;
+  margin: 0 0 0.3rem 0;
+}
+
+.card-body {
+  padding: 1rem 1.2rem;
+}
+
+input[type="text"] {
+  font-size: 0.9rem;
+  color: #343434;
+  border: 2px solid #f3f3f3;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+::placeholder {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #e8e8e8;
+}
+
+input:focus {
+  outline: none;
+}
+
+.text {
+  margin: 0;
+}
+
+.btn {
+  display: inline;
+  background-color: #1a7ff8;
+  border-radius: 0.7rem;
+  padding: 10px 20px;
+  margin-left: 0.5rem;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
