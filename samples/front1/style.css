@@ -1,0 +1,265 @@
+*{
+    font-family: 'Open Sans','sans-serif';
+    margin: 0;
+    padding: 0;
+
+}
+
+ul,li,a {
+    text-decoration: none;
+}
+
+ul.list-item{
+    list-style-type: none;
+}
+
+.flex-container{
+    display: flex;
+}
+
+/* Início do header */
+
+.logo{
+    color : white;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    margin-left: 70px;
+    padding-left: 10px;
+}
+.list-item{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    margin-right: 70px;
+}
+.list-item a {
+    color: white;
+}
+.header {
+    background-color: #122A57;
+    height: 100px;
+    flex-grow: 1;
+}
+/* Fim do header  */
+
+
+
+.primeira-parte{
+    color: #122A57;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.texto-primeira-parte{
+    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.texto-primeira-parte br {
+    font-size: 160%;
+}
+.texto-primeira-parte h1 {
+    font-size: 200%;
+    width: 230px;
+}
+.texto-primeira-parte a{
+    margin-top: 20px;
+    font-size: 160%;
+    background-color: #122A57;
+    width: 200px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    height: 30px;
+    font-size: 20px;
+}
+#imagem-1{
+    width: 90%;
+}
+
+/* Fim da primeira parte */
+
+
+/* Início da segunda parte */
+
+
+.segunda-parte{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.texto-segunda-parte{
+    flex-wrap: wrap;
+    margin : 10px;
+    margin-right: 100px;
+}
+
+.texto-segunda-parte h2{
+    border-left: 5px solid #122A57;
+    color :#122A57;
+    height: 50px;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.texto-segunda-parte p{
+    margin-top: 25px;
+    color: #122A57;
+    font-size: 12px;
+
+}
+
+#imagem2{
+    margin-left: 50px;
+}
+
+
+
+/* Fim da parte 2 */
+
+
+
+/* Início da seção de serviços */
+
+.servicos{
+    flex-direction: column;
+    background-color: #122A57;
+}
+
+.titulo-servicos{
+    margin: 70px;
+    margin-left: 150px;
+    font-size: 140%;
+    color:white;
+}
+
+.servicos-colunas{
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color:white;
+}
+
+.icones{
+    flex-direction: column;
+    align-items: center;
+}
+
+.icones p{
+    margin-top: 20%;
+    font-size: 120%;
+}
+
+.icones a {
+    font-size: 120%;
+    background-color: white;
+    width: 200px;
+    border-radius: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    color: #122A57;
+    text-align: center;
+    height: 33px;
+    padding-top: 10px;
+}
+
+/* Fim da seção de serviços */
+
+
+/* Início seção de planos */
+
+.planos{
+    flex-direction: column;
+    margin-bottom : 140px;
+}
+.titulo-plano{
+    margin: 80px;
+    color : #122A57;
+}
+.plano-externo{
+    justify-content: space-around;
+    align-items: flex-end;
+    
+}
+.plano-interno{
+    border: 6px solid #122A57;
+    flex-direction: column;
+    width: 200px;
+    justify-content: space-around;
+    
+}
+.plano-interno ul{
+    margin: 23px;
+    list-style-type: square;
+}
+
+.plano-interno a {
+    color: white;
+    background-color: #122A57;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 30px;
+    width: 70%;
+}
+
+.plano-interno h3{
+    color: #122A57;
+    justify-content: center;
+    margin-left: 23px;
+    margin-right: 23px;
+    margin-top : 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #122A57;
+    width: 75%;
+    text-align: center;
+}
+.plano1{
+    height: 280px;
+
+}
+.plano2{
+    height: 360px;
+}
+.plano3{
+    height: 440px;
+}
+
+
+
+/* Fim da seção de planos */
+
+
+
+/* Início do footer */
+
+
+footer{
+    flex-direction: row;
+    height: 80px;
+    background-color: #122A57;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer p {
+    padding-top: 20px;
+    color: white;
+}
+
+footer span {
+    font-weight: bold;
+}
