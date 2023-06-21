@@ -1,0 +1,22 @@
+{
+  "name": "webpack-demo3",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "build": "webpack -o ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/plugin-syntax-jsx": "^7.18.6",
+    "@babel/preset-env": "^7.19.0",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

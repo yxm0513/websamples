@@ -1,0 +1,14 @@
+{
+  "name": "webpack-demo08",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack -o ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "open-browser-webpack-plugin": "^0.0.5",
+    "webpack-cli": "^4.10.0"
+  }
+}
