@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        const d = Object.create(null)
+        console.log(d);
+
+        console.log(null);
+
+        const a = {};
+        console.log(a);
+
+
+        const o1 = {
+            'a' : 1,
+            'b' : 2,
+            'test' : function (){
+                console.log('test')
+            }
+        }
+        console.log('o1');
+        console.log(o1);
+        console.log(o1.__proto__);
+        // console.log(o1.prototype);
+        console.log(o1.__proto__ === Object.prototype);
+
+
+        const o2 = new Object();
+
+        console.log('o2');
+        console.log(o2);
+        console.log(o2.__proto__ === Object.prototype);
+
+        const Employee = function (name, id){
+            this.name = name;
+            this.id = id;
+        }
+        Employee.prototype.x = 'x';
+        const e = new Employee('simon', 1);
+        console.log('e');
+        console.log(e);
+        console.log(e.x)
+        console.log(e.__proto__ === Employee.prototype);
+
+        class NewEmployee extends Employee {
+            constructor() {
+                super(...arguments);
+                this.haha = 'haha'
+            }
+            test(){
+                console.log('test')
+            }
+        }
+        const e1 = new NewEmployee('newsimon', 2);
+        console.log('e1');
+        console.log(e1);
+        console.log(e1.x)
+        console.log(e1.__proto__ === NewEmployee.prototype);
+        console.log(e1.__proto__.__proto__ === Employee.prototype);
+
+        function NewEmployee1 (){
+
+        }
+        NewEmployee.prototype.test2 = function(){
+            console.log('test2')
+        }
+        NewEmployee1.prototype = e1
+        const e2 = new NewEmployee1('newsimon2', 3);
+        console.log('e2')
+        console.log(NewEmployee1.prototype)
+        console.log(e2);
+        console.log(e2.x)
+        console.log(e2.name)
+        e2.test()
+        e2.test2()
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

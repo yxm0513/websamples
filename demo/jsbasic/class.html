@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <script type="text/javascript">
+    window.onload= function () {
+        class Employee{
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+            test(){
+                console.log("hello " + this.name)
+            }
+        }
+
+        const e1 = new Employee(101, 'simon');
+        const e2 = new Employee(102, 'tom');
+        e1.class();
+        e2.class();
+        console.log(e1)
+        console.log(e2)
+
+        class NewEmployee extends Employee {
+            constructor(id, name, date) {
+                super(id, name);
+                this.date = date
+            };
+            'showdate' = function(){
+                console.log(this.name + "'s date is " + this.date)
+            };
+            showdate2(){
+                console.log(this.name + "'s date is " + this.date)
+            };
+            static test3(){
+                console.log("static function");
+            }
+        }
+        const e3 = new NewEmployee(101, 'joyce', '20220922');
+        e3.class();
+        e3.showdate();
+        e3.showdate2();
+        NewEmployee.test3()
+        console.log(e3)
+
+        function FuncEmployee(id, name){
+            this.id = id;
+            this.name = name;
+            this.test = function(){
+                console.log("name is " + this.name);
+            };
+        }
+
+        FuncEmployee.prototype.test1 = function(){
+            console.log("id is " + this.id);
+        }
+
+        const e4 = new FuncEmployee(100, 'jay');
+        e4.test();
+        e4.test1();
+        console.log(e4);
+
+      const test = {
+        'props': 1,
+        test() {
+          console.log("test log")
+        }
+      }
+      console.log(class);
+
+      class.test1 = function (params){
+        console.log(arguments)
+      }
+      console.log(class);
+      // call apply bind
+      function callFunc(){
+          console.log(this, arguments)
+      }
+      console.log("call");
+      callFunc.call(class, "call");
+      console.log("call done")
+      console.log("apply");
+      callFunc.apply(class, ["apply"]);
+      console.log("apply done")
+      console.log("bind");
+      const newfunc = callFunc.bind(class, ["bind"]);
+      newfunc();
+      console.log("bind done")
+
+
+      let dog = {
+        sound: 'woof',
+        talk: function () {
+          console.log(this.sound)
+        }
+      }
+
+      dog.talk()// “woof”
+      let mytalk = dog.talk
+      mytalk() // undefined. 为什么会undefined, 因为上下文环境没有this
+
+      let btn = document.getElementById('myBtn')
+      btn.addEventListener("click", function(){
+          dog.talk()
+      });
+    };
+  </script>
+</head>
+<body>
+
+  <button id="myBtn">Test</button>
+
+</body>
+</html>

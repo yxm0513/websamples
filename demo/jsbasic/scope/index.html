@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Advanced JS Lecture</title>
+	<link rel="stylesheet" href="main.css" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!--	<script type="text/javascript" src="app.js"></script>-->
+	<script type="text/javascript" src="closures.js"></script>
+</head>
+
+<!-- Nav Bar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse navbar-standalone">
+			<nav class="nav navbar-nav">
+				<li class="active"><a href="#closures">Closures in JavaScript</a></li>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<body class="container" style="margin-top:100px">
+	<div class="beautify">
+		<h2 class="big-header">JavaScript  - Understanding Scope:</h2>
+		<h5 class="headers"><em>inside and outside of functions</em></h5>
+
+		<h4 class="headers">What does SCOPE mean?</h4>
+		<p>Do I have ACCESS to the variable / function? </p>
+		<p>When does the access to a variable / function end? What is its life span?</p>
+
+		<h4 class="headers">By the end of this lesson you should...</h4>
+		<p>Deepen your understanding of scope of variables with JavaScript</p>
+		<p>Challenge: Construct various examples showing the complexity of global + local scope</p>
+
+		<h4 class="headers">How?</h4>
+		<ol>
+			<li>Where's the code: index.html + app.js</li>
+			<li>BEFORE we run the code: What do you expect to happen?</li>
+			<li>Run some code</li>
+			<li>WHOA Review</li>
+		</ol>
+
+		<h3 class="headers">Things To Know</h3>
+		<ul>
+			<li>GLOBAL: Declared outside of a function. It exists on the web page, available until the page is closed</li>
+			<li>LOCAL: Declared inside a function. It exists when the function starts, and is done when the function returns something, ie: ends</li>
+		</ul>
+
+		<ul>
+			<li>Dev Tools. Keep them open always when writing JavaScript</li>
+			<li><code>console.log</code> - allows us to execute JS and see it in the browser</li>
+		</ul>
+
+		<hr>
+
+		<h2 class="headers">Before we run the code...</h2>
+		<p>--- Let's take a look at the app.js file. ---</p>
+		<ul>
+			<li>SAY: What do you expect the scope of SAY to be?</li>
+			<code>SAY = "declared above the DOM is ready..."</code>
+			<li>inside doc ready: What do you expect the scope of favoriteWater to be?</li>
+			<code> var favoriteWater = "free";</code>
+			<li>NAMED FUNCTION: What do you expect the scope of "Jack Sparrow" to be?</li>
+			<code>
+				var greetingsFromCharacters = function(captain) {...}
+			</code>
+			<li>How is name = "Girl Develop It" different than name = "Jaclyn Karnowski"?</li>
+			<code>function say(hello) {...}</code>
+		</ul>
+
+		<hr>
+
+		<h3 class="headers">Run The Code!</h3>
+
+		<hr>
+
+		<h3 class="headers">WHOA. What just happened?</h3>
+		<ul>
+			<li>What did you notice about the life span of one of the variables or function?</li>
+			<li>Which variable has the shortest life span / most minimal scope?</li>
+			<li>Which variable has the longest life span / greatest scope?</li>
+			<li>What's with the order of the variables you see in the console? Anything surprising?</li>
+			<li>When does a function get executed? When does end/close/die?</li>
+			<li>THIS. What does 'this' have to do with scope? What is this.name versus name?</li>
+		</ul>
+	</div>
+
+	<hr>
+
+	<div>
+		<h2 class="headers" id="closures">PART 2: Advanced JS - Closures</h2>
+		<ul>
+			<li>Closures change the accessibility of private variables to 'free' variables</li>
+			<li>Closure is a function that has access to an outer (higher level scope) function</li>
+			<li>It's the ability to retain state and scope after the function returns</li>
+		</ul>
+		<br>
+		<h4>When in doubt about scope of a variable or function, check your context!</h4>
+	</div>
+
+	<div>
+		<h2 class="headers">Play Along!</h2>
+		<p>Grab your laptop. Open the console in the Chrome browser or use <a href="https://jsfiddle.net/">JS Fiddle</a>. Code along!</p>
+	</div>
+
+	<hr>
+</body>
+</html>

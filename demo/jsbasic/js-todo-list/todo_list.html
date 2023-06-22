@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Todo List</title>
+  	<script type="text/javascript" src="todo_list.js"></script>
+	<script type="text/javascript" src="todo_list_2.js"></script>
+	<script>
+
+		function show_todo(){
+			document.getElementById('root').innerHTML = '';
+			groceryList.myList.forEach((e)=>{
+				var node = document.createElement("li");
+				node.innerText = e.description + ": " + e.completed;
+				document.getElementById('root').appendChild(node);
+			})
+		}
+
+		window.onload = function(){
+			// todo_list
+			show_todo();
+			document.getElementById('addtodo').addEventListener('click', function(){
+				const value = document.getElementById('addtodo_value').value;
+				console.log(value);
+				groceryList.add(value);
+				show_todo();
+			})
+
+
+			const todo = new makeTodoList();
+			todo.add('test')
+			todo.list.forEach((e)=>{
+				var node = document.createElement("li");
+				node.innerText = e.description + ": " + e.completed;
+				document.getElementById('root2').appendChild(node);
+			})
+
+			const todo1 = new TodoList();
+			todo1.addItem('test1')
+			todo1.list.forEach((e)=>{
+				var node = document.createElement("li");
+				node.innerText = e.description + ": " + e.completed;
+				document.getElementById('root3').appendChild(node);
+			})
+		}
+
+	</script>
+
+</head>
+<body>
+	<input type="text" id="addtodo_value">
+	<button id="addtodo"> Add </button>
+	<h5>todo list 1</h5>
+	<hr />
+	<div id="root"></div>
+
+	<h5>todo list 2:1</h5>
+	<hr />
+	<div id="root2"></div>
+
+	<h5>todo list 2:2</h5>
+	<hr />
+	<div id="root3"></div>
+</body>
+</html>

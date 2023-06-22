@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callback</title>
+
+    <script>
+        console.log("callback test");
+        const test = function(test){
+            if(test === undefined){
+                test = '';
+            }
+            console.log(`test ${test}`);
+            return true;
+        }
+        setTimeout(test, 1000);
+
+        function my_callback_test(fn, args){
+            console.log('my_callback_test');
+            fn(args)
+        }
+        my_callback_test(test, 'simon');
+
+
+        // promise
+        console.log("promise test");
+        function executer(resolve, reject){
+            const check = test();
+            if(check){
+                resolve('success');
+            }else {
+                reject('failure');
+            }
+        }
+
+      const p = new Promise(executer);
+
+       p.then(function(fromResolve){
+         console.log("Promise is "+fromResolve);
+         }).catch(function(fromReject){
+         console.log("Promise is "+fromReject);
+       });
+
+      //async
+        console.log("async test");
+        async function test_async(){
+            await setTimeout(test, 1000);
+            await my_callback_test(test, 'simon');
+            console.log("test_async done");
+        }
+        test_async();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
