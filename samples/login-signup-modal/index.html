@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Login/Signup form Design | upCoding</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button onclick="toggleModal('open')" class="open-modal-btn">
+      View Modal Form
+    </button>
+    <div id="modal" class="modal">
+      <i
+        onclick="toggleModal('close')"
+        class="fa-regular fa-circle-xmark close-icon"
+      ></i>
+      <div class="container mr-1">
+        <h1 class="header">Hello Again!</h1>
+        <h2 class="text">Enter your login credential to access your account</h2>
+        <form class="form" action="#">
+          <div class="form-field">
+            <label class="label" for="email">Email or Username</label>
+            <input class="input" type="text" required />
+          </div>
+          <div class="form-field">
+            <label class="label" for="email">Password</label>
+            <input class="input" type="text" required />
+          </div>
+          <div class="forgot-password"><a href="#">Forgot Password</a></div>
+
+          <div class="form-field">
+            <button class="btn">Login</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="container ml-1">
+        <h1 class="header">Create New Account</h1>
+        <div class="social-icons">
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <h2 class="text">or use your email for registration</h2>
+        <form class="form" action="#">
+          <div class="form-field">
+            <label class="label" for="firstname">Name</label>
+            <input class="input" type="text" required />
+          </div>
+
+          <div class="form-field">
+            <label class="label" for="email">Email</label>
+            <input class="input" type="text" required />
+          </div>
+
+          <div class="form-field">
+            <label class="label" for="email">Password</label>
+            <input class="input" type="text" required />
+          </div>
+
+          <div class="form-field">
+            <button class="btn">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
