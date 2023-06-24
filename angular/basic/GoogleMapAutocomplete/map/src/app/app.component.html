@@ -1,0 +1,34 @@
+<h1>Angular Google Mapes</h1>
+<label for="place" style="font-size: 1.5rem; margin-right: 1rem;"
+  >Search Google Place</label
+>
+<input
+  style="width: 500px; height: 2rem; font-size: 1rem;"
+  type="text"
+  name=""
+  id="place"
+  #search
+  [formControl]="searchControl"
+  autocomplete="off"
+  autocapitalize="off"
+  spellcheck="off"
+/>
+
+<agm-map
+  [latitude]="latitude"
+  [longitude]="longitude"
+  [scrollwheel]="false"
+  [zoom]="zoom"
+  style="height: 600px; width: 1000px;"
+  (mapClick)="onMapClicked($event)"
+>
+  <agm-marker
+    [latitude]="latitude"
+    [longitude]="longitude"
+    [markerDraggable]="true"
+    (dragEnd)="dragEnd($event)"
+    #map
+  ></agm-marker>
+</agm-map>
+
+<h3>{{ address }}</h3>

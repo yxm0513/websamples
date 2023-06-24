@@ -1,0 +1,13 @@
+<h3>Angular vedio player demo</h3>
+
+
+<vg-player>
+  <vg-controls>
+    <vg-play-pause></vg-play-pause>
+    <vg-time-display></vg-time-display>
+    <vg-mute></vg-mute>
+    <vg-volume></vg-volume>
+  </vg-controls>
+
+  <video src="../assets/Demo Videogular.mp4" [vgMedia]="myVideoRef" #myVideoRef></video>
+</vg-player>
