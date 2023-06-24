@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap");
+:root {
+  /*colors*/
+  --primary: #b983ff;
+  --secondary: #52057b;
+  --secondary-light: rgba(82, 5, 123, 0.8);
+  --secondary-light-2: rgba(82, 5, 123, 0.5);
+  --white: #fff;
+  --red: #fd1818;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 50px;
+  padding: 0.5rem;
+}
+
+.container form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.2s;
+}
+
+.search-icon:hover {
+  background-color: var(--secondary-light);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  color: var(--secondary);
+  width: 0;
+  flex: 1;
+  border-radius: 50px;
+  transition: width 0.6s, padding 0.5s;
+}
+
+.search-input::placeholder {
+  color: var(--secondary-light-2);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.active.search-input::placeholder {
+  font-size: 1.1rem;
+  opacity: 1;
+}
+
+.search-input.active {
+  width: 500px;
+  padding: 1rem;
+}
+
+.clear-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 45px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.clear-icon.active {
+  opacity: 1;
+}
+
+.clear-icon i {
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.clear-icon i:hover {
+  color: var(--red);
+}

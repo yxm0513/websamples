@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Search Bar | upCoding</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" id="form" method="GET">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search anything..."
+          name="q"
+          autocomplete="off"
+        />
+
+        <div class="clear-icon">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </div>
+
+        <button class="search-icon" type="button" onclick="search()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
