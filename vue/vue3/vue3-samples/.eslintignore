@@ -1,0 +1,6 @@
+src/*.js
+src/pages/*.vue
+src/components/*.vue
+src/*.vue
+src/*
+src/utils/*js
