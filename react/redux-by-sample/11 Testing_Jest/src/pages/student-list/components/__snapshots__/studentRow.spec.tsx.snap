@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StudentRowComponent should render as expect passing student with gotActiveTraining equals false 1`] = `
+<tr>
+  <td />
+  <td>
+    <span>
+      test name
+    </span>
+  </td>
+  <td>
+    <span>
+      test email
+    </span>
+  </td>
+  <td>
+    <span
+      className="btn btn-link btn-xs"
+      onClick={[Function]}
+    >
+      <span
+        aria-hidden="true"
+        className="glyphicon glyphicon-pencil"
+      />
+    </span>
+    <span
+      aria-hidden="true"
+      className="glyphicon glyphicon-trash"
+    />
+  </td>
+</tr>
+`;
+
+exports[`StudentRowComponent should render as expect passing student with gotActiveTraining equals true 1`] = `
+<tr>
+  <td>
+    <span
+      aria-hidden="true"
+      className="glyphicon glyphicon-ok"
+    />
+  </td>
+  <td>
+    <span>
+      test name
+    </span>
+  </td>
+  <td>
+    <span>
+      test email
+    </span>
+  </td>
+  <td>
+    <span
+      className="btn btn-link btn-xs"
+      onClick={[Function]}
+    >
+      <span
+        aria-hidden="true"
+        className="glyphicon glyphicon-pencil"
+      />
+    </span>
+    <span
+      aria-hidden="true"
+      className="glyphicon glyphicon-trash"
+    />
+  </td>
+</tr>
+`;
