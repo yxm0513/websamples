@@ -1,0 +1,26 @@
+<svelte:options tag="canarias-js-button" />
+
+<script lang="ts">
+  export let disabled: boolean = false;
+  export let color: 'primary' | 'default' = 'default';
+</script>
+
+<style>
+  button {
+    padding: 15px;
+    background-color: rgb(33, 33, 33);
+    color: darkorange;
+    cursor: pointer;
+  }
+
+  button.primary {
+    padding: 15px;
+    color: rgb(33, 33, 33);
+    background-color: darkorange;
+    cursor: pointer;
+  }
+</style>
+
+<button part="button" disabled="{disabled}" class:primary="{color === 'primary'}" on:click>
+  <slot />
+</button>
