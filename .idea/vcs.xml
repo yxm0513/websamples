@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nuxt/portfolio_v2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/react/password-validation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react/react_basics" vcs="Git" />
   </component>
 </project>
