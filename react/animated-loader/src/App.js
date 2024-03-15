@@ -8,16 +8,19 @@ function App() {
   const getAPIData = () => {
     setLoading(true);
 
-    fetch("http://localhost:5000/getImages")
-      .then((response) => response.json())
-      .then((data) => {
-        setImgList(data.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log("ERROR:", error);
-        setLoading(false);
-      });
+    setTimeout( ()=>{
+      fetch("http://localhost:5000/getImages")
+        .then((response) => response.json())
+        .then((data) => {
+          setImgList(data.data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log("ERROR:", error);
+          setLoading(false);
+        });
+    }
+    , 3000);
   };
 
   return (

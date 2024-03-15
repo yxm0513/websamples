@@ -5,8 +5,8 @@ function App() {
 
   const drawRectangle = () => {
     const context = canvasRef.current.getContext("2d");
-    context.strokeStyle = "white";
-    context.lineWidth = 2;
+    context.strokeStyle = "green";
+    context.lineWidth = 0.5;
     context.strokeRect(50, 30, 110, 90);
     context.strokeRect(170, 65, 100, 80);
   };
